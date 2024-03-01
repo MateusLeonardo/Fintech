@@ -1,14 +1,19 @@
-import { useData } from "../Context/DataContext"
+import VendaItem from "../Components/VendaItem";
+import { useData } from "../Context/DataContext";
 
 const Vendas = () => {
-  const {data} = useData()
+  const { data } = useData();
 
-  if(data === null) return null;
+  if (data === null) return null;
   return (
     <ul>
-      {data.map(venda => <li></li>)}
+      {data.map((venda) => (
+        <li key={venda.id}>
+          <VendaItem venda={venda} />
+        </li>
+      ))}
     </ul>
-  )
-}
+  );
+};
 
-export default Vendas
+export default Vendas;

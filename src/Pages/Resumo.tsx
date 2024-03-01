@@ -26,7 +26,7 @@ const Resumo = () => {
           </span>
         </div>
         <div className="box">
-          <h2>Vendas</h2>
+          <h2>Processando</h2>
           <span>
             {data
               .filter((i) => i.status === "processando")
@@ -35,7 +35,7 @@ const Resumo = () => {
           </span>
         </div>
       </div>
-      <div className="box">Graficos</div>
+      <div className="box mb">Graficos</div>
     </section>
   );
 };
